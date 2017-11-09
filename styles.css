@@ -1,0 +1,122 @@
+.scroll {
+    height: 50px;	
+    font-family:sans-serif;
+    overflow: hidden; 
+    /* keeps what isn't typed yet "hidden" */
+    position: relative;
+   }
+   .scroll {
+    font-size: 5em;
+    color: chartreuse;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 100px;
+    /* distance from top of page */
+    transform:translateX(100%);	
+    /* translateX is used to move elements along the x-axis
+    applies animation to this element */
+    animation: scroll 25s linear infinite;
+   }
+   @keyframes scroll {
+    0%   { 
+    transform: translateX(100%); 		
+    }
+    100% { 
+    transform: translateX(-100%); 
+    }
+   }
+
+/* code for both scrolls from https://www.quackit.com/css/codes/marquees/ with some unnecessary
+things removed and annotations added in by me */
+
+.typewriter {
+    overflow: hidden; /* keeps what isn't typed yet "hidden" */
+    font-family:sans-serif;
+    border-right: .25em solid red; /* width and color of cursor */
+    /* the same as a border, like we did with "small box", just only the right side
+    to create the "illusion" of a cursor */
+    white-space: nowrap; /* keeps everything on one line */
+    margin: 0 auto; /* creates the scrolling effect*/
+    letter-spacing: .10em; /* spacing between letters */
+    animation: 
+      typing 3.5s steps(90, end),
+      /* sets the speed of the "typing", 1s VERY FAST, 10s VERY SLOW */
+      /* 90 references the speed with which the letters are "typed" */
+      blink-caret 1.0s step-end infinite;
+  }
+  
+  /* sets the framing of where the text starts and finishes */
+  @keyframes typing {
+    from { width: 0% }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent } 
+    /* creates the BLINK */
+    50% { border-color: red; }
+    /* creates the cursor */
+  }
+
+  /* code from https://css-tricks.com/snippets/css/typewriter-effect/ as example
+  annoted with details of HOW it functions by meee for the assignment / show and tell */
+
+  h1{
+      color: blue;
+  }
+
+  .scroll2 {
+    height: 50px;	
+    overflow: hidden; 
+    /* keeps what isn't typed yet "hidden" */
+    position: relative;
+   }
+   .scroll2 {
+    font-size: 5em;
+    font-family:sans-serif;
+    color: goldenrod;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 100px;
+    /* distance from top of page */
+    transform:translateY(-100%);	
+    /* translateX is used to move elements along the x-axis
+    applies animation to this element */
+    animation: scroll2 5s linear infinite;
+   }
+   /* Move it (define the animation) */
+   @keyframes scroll2 {
+    0%   { 
+    transform: translateY(-100%); 		
+    }
+    100% { 
+    transform: translateY(100%); 
+    }
+   }
+
+p{
+    text-align: center;
+    font-family:sans-serif;
+}
+
+a:link, a:visited{
+    background-color: goldenrod;
+    color: yellow;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-family:sans-serif;
+}
+
+a:hover{
+    background-color: chartreuse;
+    color: black;
+    font-family:sans-serif;
+}
+
+.bet{
+    text-align: center;
+    font-family: sans-serif;
+}
